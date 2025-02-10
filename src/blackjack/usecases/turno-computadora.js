@@ -1,5 +1,13 @@
 import { pedirCarta, valorCarta } from './';
 
+/**
+ * Esta función crea o da paso al turno de la computadora
+ * @param {number} puntosMinimos puntos mínimos que la computadora necesita para ganar
+ * @param {HTMLElement} puntosHTML elemento HTML para mostrar los puntos
+ * @param {HTMLElement} divCartasComputadora elemento HTML para mostrar la carta
+ * @param {array<string>} deck 
+ */
+
 export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputadora,  deck = []) => {
 
     if(!puntosMinimos) throw new Error('Puntos mínimos son necesarios');
