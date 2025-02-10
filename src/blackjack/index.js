@@ -6,9 +6,8 @@
  */
 
 import _ from 'underscore';
-import { crearDeck } from './usecases/crear-deck.js';
-import { pedirCarta } from "./usecases/pedir-carta.js";
-import { valorCarta } from "./usecases/valor-carta.js";
+
+import { crearDeck, pedirCarta, valorCarta  } from "./usecases";
 
 let deck         = [];
 const tipos      = ['C','D','H','S'];
