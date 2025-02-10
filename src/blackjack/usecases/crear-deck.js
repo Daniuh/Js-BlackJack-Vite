@@ -1,4 +1,4 @@
-import  _  from "underscore";
+import  _  from 'underscore';
 
 /**
  * Esta función crea un nuevo deck
