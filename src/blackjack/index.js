@@ -8,6 +8,7 @@
 import _ from 'underscore';
 import { crearDeck } from './usecases/crear-deck.js';
 import { pedirCarta } from "./usecases/pedir-carta.js";
+import { valorCarta } from "./usecases/valor-carta.js";
 
 let deck         = [];
 const tipos      = ['C','D','H','S'];
@@ -27,14 +28,6 @@ const divCartasComputadora = document.querySelector('#computadora-cartas');
 const puntosHTML = document.querySelectorAll('small');
 
 deck = crearDeck(tipos, especiales);
-
-const valorCarta = ( carta ) => {
-
-    const valor = carta.substring(0, carta.length - 1);
-    return ( isNaN( valor ) ) ? 
-            ( valor === 'A' ) ? 11 : 10
-            : valor * 1;
-}
 
 // turno de la computadora
 const turnoComputadora = ( puntosMinimos ) => {
