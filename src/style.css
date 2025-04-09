@@ -29,3 +29,7 @@ html, body {
 #computadora-cartas, #jugador-cartas {
   height: 240px;
 }
+
+.nameUserH1, .userCounter {
+  display: inline-block;
+}

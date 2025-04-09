@@ -15,6 +15,8 @@ export const hideModal = () => {
 export const renderModal = (element) => {
     if(modal) return;
 
+    const nameUserH1 = document.querySelector('.nameUserH1');
+
     modal = document.createElement('div');
     modal.innerHTML = modalHtml;
     modal.className = 'modal-container hide-modal';
@@ -23,19 +25,14 @@ export const renderModal = (element) => {
 
     showModal();
 
-    /* modal.addEventListener('click', (event) => {
-        if(event.target.className === 'modal-container'){
-            hideModal();
-        }
-    });
-
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         
         const formData = new FormData(form);
-
+        //console.log(formData.get('nameUser'));
+        nameUserH1.innerText = formData.get('nameUser');
         hideModal();
-    }); */
+    });
 
     element.append(modal);
 }
