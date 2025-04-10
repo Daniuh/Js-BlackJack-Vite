@@ -13,8 +13,6 @@ export const hideModal = () => {
 }
 
 export const renderModal = (element) => {
-    if(modal) return;
-
     const nameUserH1 = document.querySelector('.nameUserH1');
 
     modal = document.createElement('div');
@@ -23,10 +21,19 @@ export const renderModal = (element) => {
 
     form = modal.querySelector('form');
 
+    element.append(modal);
+
     showModal();
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
+        console.log('Antes de');
+        
+
+        if(validarName() === false) return;
+
+        console.log('después de');
+        
         
         const formData = new FormData(form);
         //console.log(formData.get('nameUser'));
@@ -34,5 +41,21 @@ export const renderModal = (element) => {
         hideModal();
     });
 
-    element.append(modal);
+    form.querySelector('#nameUser').addEventListener('input', () => {
+        const errorText = document.getElementById('error');
+        errorText.textContent = '';
+    });
+}
+
+const validarName = () => {
+    const nameUser  = document.getElementById('nameUser');
+    const errorText = document.getElementById('error');
+
+    if (nameUser.value.trim() === "") {
+        errorText.textContent = 'Este campo no puede estar vacío';
+        return false;
+    }
+
+    errorText.textContent = '';
+    return true;
 }

@@ -45,10 +45,14 @@ body {
 
 .input {
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: rgb(108, 118, 124);
     background-color: rgb(78, 85, 88);;
     color: aliceblue;
+}
+
+.input:focus {
+    outline: none;
 }
 
 .input::placeholder {
@@ -56,9 +60,13 @@ body {
     opacity: 1;
 }
 
-.input:focus {
-    outline: none;
+.errorUser {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
 }
+
 
 form {
     display: flex;
