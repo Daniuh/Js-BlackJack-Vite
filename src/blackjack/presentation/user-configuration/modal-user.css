@@ -61,7 +61,7 @@ body {
 }
 
 .errorUser {
-    color: red;
+    color: rgb(0, 0, 0);
     font-size: 14px;
     margin-top: 4px;
     display: block;

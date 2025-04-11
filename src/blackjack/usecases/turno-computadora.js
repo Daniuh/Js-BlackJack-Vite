@@ -1,3 +1,4 @@
+import { showModalAlert } from '../presentation/user-modal-alert/user-modal-alert';
 import { crearCartaHTML, pedirCarta, valorCarta } from './';
 
 /**
@@ -14,7 +15,8 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
     if(!puntosHTML) throw new Error('Argumento puntosHTML es necesarios');
 
 
-    let puntosComputadora = 0;
+    let puntosComputadora = 0,
+        whoWon = '';
 
     do {
         const carta = pedirCarta(deck);
@@ -33,13 +35,17 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
 
     setTimeout(() => {
         if( puntosComputadora === puntosMinimos ) {
-            alert('Nadie gana :(');
+            whoWon = 'Nadie gana :(';
+            showModalAlert(whoWon);
         } else if ( puntosMinimos > 21 ) {
-            alert('Computadora gana')
+            whoWon = 'Computadora gana';
+            showModalAlert(whoWon);
         } else if( puntosComputadora > 21 ) {
-            alert('Jugador Gana');
+            whoWon = 'Jugador Gana';
+            showModalAlert(whoWon);
         } else {
-            alert('Computadora Gana')
+            whoWon = 'Computadora Gana';
+            showModalAlert(whoWon);
         }
     }, 100 );
 }

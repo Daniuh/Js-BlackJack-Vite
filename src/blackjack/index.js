@@ -8,6 +8,7 @@
 import _ from 'underscore';
 
 import { crearDeck, turnoComputadora, crearCartaHTML, pedirCarta, valorCarta } from './usecases';
+import { renderModalAlert, showModalAlert } from './presentation/user-modal-alert/user-modal-alert';
 
 let deck         = [];
 const tipos      = ['C','D','H','S'];
@@ -16,7 +17,8 @@ const especiales = ['A','J','Q','K'];
 deck = crearDeck(tipos, especiales);
 
 let puntosJugador = 0,
-    puntosComputadora = 0;
+    puntosComputadora = 0,
+    whoWon = '';
 
 const puntosHTML = document.querySelectorAll('small');
 
@@ -37,13 +39,17 @@ btnPedir.addEventListener('click', () => {
     divCartasJugador.append( imgCarta );
 
     if ( puntosJugador > 21 ) {
-        console.warn('Lo siento mucho, perdiste');
+        whoWon = 'Lo siento mucho, perdiste';
+        showModalAlert(whoWon);
+
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
         turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, deck );
 
     } else if ( puntosJugador === 21 ) {
-        console.warn('21, genial!');
+        whoWon = '21, genial!';
+        showModalAlert(whoWon);
+
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
         turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, deck );

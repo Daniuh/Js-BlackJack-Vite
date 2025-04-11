@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hide-modal {
+    display: none !important;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.button-modal-alert {
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(0,128,85);
+    border-color: rgb(0,128,85);
+    color: rgb(244, 244, 244);
+}
+
+.button-modal-alert:hover {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
