@@ -1,20 +1,20 @@
-import './user-modal-alert.css';
 import modalHtml from './user-modal-alert.html?raw';
+import './user-modal-alert.css';
 
 let modal;
 
 export const showModal = () => {
-    modal?.classList.remove('hide-modal');
+    modal?.classList.remove('hide-modal-alert');
 }
 
 export const hideModal = () => {
-    modal?.classList.add('hide-modal');
+    modal?.classList.add('hide-modal-alert');
 }
 
 export const renderModalAlert = (element) => {
     modal = document.createElement('div');
     modal.innerHTML = modalHtml;
-    modal.className = 'modal-container hide-modal';
+    modal.className = 'modal-container-alert hide-modal-alert';
 
     element.append(modal);
 }
