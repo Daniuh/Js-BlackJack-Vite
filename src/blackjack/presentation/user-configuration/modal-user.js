@@ -27,14 +27,9 @@ export const renderModal = (element) => {
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        console.log('Antes de');
-        
 
         if(validarName() === false) return;
-
-        console.log('después de');
-        
-        
+                
         const formData = new FormData(form);
         //console.log(formData.get('nameUser'));
         nameUserH1.innerText = formData.get('nameUser');

@@ -47,7 +47,7 @@ btnPedir.addEventListener('click', () => {
         turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, deck );
 
     } else if ( puntosJugador === 21 ) {
-        whoWon = '21, genial!';
+        whoWon = '21 BlackJack, genial!';
         showModalAlert(whoWon);
 
         btnPedir.disabled   = true;

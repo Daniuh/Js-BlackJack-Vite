@@ -41,7 +41,7 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
             whoWon = 'Computadora gana';
             showModalAlert(whoWon);
         } else if( puntosComputadora > 21 ) {
-            whoWon = 'Jugador Gana';
+            whoWon = 'Has Ganado';
             showModalAlert(whoWon);
         } else {
             whoWon = 'Computadora Gana';
