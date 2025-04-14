@@ -1,0 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hide-modal-alert {
+    display: none !important;
+}
