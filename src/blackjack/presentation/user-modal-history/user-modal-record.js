@@ -24,7 +24,7 @@ export const modalRecord = (element) => {
         const userRecord = modal.querySelector('.nameUserRecord');
         const nameUserR = localStorage.getItem('nameUser');
         userRecord.innerText = nameUserR;
-        /* localStorage.removeItem('nameUser'); */
+        counterModal();
         showModal();
     });
 
@@ -33,4 +33,12 @@ export const modalRecord = (element) => {
             hideModal();
         }
     });
+}
+
+const counterModal = () => {
+    const counterUserR     = document.querySelector('.counterUserR');
+    const counterComputerR = document.querySelector('.counterComputerR');
+
+    counterUserR.innerText     = sessionStorage.getItem('counterUser');
+    counterComputerR.innerText = sessionStorage.getItem('counterComputer');
 }
