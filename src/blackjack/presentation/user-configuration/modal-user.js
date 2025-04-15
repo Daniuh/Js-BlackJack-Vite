@@ -32,7 +32,9 @@ export const renderModal = (element) => {
                 
         const formData = new FormData(form);
         //console.log(formData.get('nameUser'));
-        nameUserH1.innerText = formData.get('nameUser');
+        const name = formData.get('nameUser');
+        nameUserH1.innerText = name;
+        localStorage.setItem('nameUser', name);
         hideModal();
     });
 

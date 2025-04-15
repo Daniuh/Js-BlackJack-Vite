@@ -12,8 +12,8 @@ export const hideModal = () => {
 }
 
 export const modalRecord = (element) => {
-    const button = document.querySelector('#btnRecord');
-
+    const button     = document.querySelector('#btnRecord');
+    
     modal = document.createElement('div');
     modal.innerHTML = modalHtml;
     modal.className = 'modal-container hide-modal';
@@ -21,6 +21,10 @@ export const modalRecord = (element) => {
     element.append(modal);
 
     button.addEventListener('click', () =>{
+        const userRecord = modal.querySelector('.nameUserRecord');
+        const nameUserR = localStorage.getItem('nameUser');
+        userRecord.innerText = nameUserR;
+        /* localStorage.removeItem('nameUser'); */
         showModal();
     });
 
