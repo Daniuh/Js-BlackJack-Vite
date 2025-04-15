@@ -9,7 +9,6 @@ import _ from 'underscore';
 
 import { crearDeck, turnoComputadora, crearCartaHTML, pedirCarta, valorCarta } from './usecases';
 import { showModalAlert } from './presentation/user-modal-alert/user-modal-alert';
-import { countersComputer, countersUser } from './usecases/turno-computadora';
 
 let deck         = [];
 const tipos      = ['C','D','H','S'];

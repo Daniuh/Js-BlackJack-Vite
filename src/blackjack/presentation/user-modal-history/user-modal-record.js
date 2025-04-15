@@ -4,11 +4,11 @@ import './user-modal-record.css';
 let modal;
 
 export const showModal = () => {
-    modal?.classList.remove('hide-modal');
+    modal?.classList.remove('hide-modal-record');
 }
 
 export const hideModal = () => {
-    modal?.classList.add('hide-modal');
+    modal?.classList.add('hide-modal-record');
 }
 
 export const modalRecord = (element) => {
@@ -16,11 +16,16 @@ export const modalRecord = (element) => {
     
     modal = document.createElement('div');
     modal.innerHTML = modalHtml;
-    modal.className = 'modal-container hide-modal';
+    modal.className = 'modal-container-record hide-modal-record';
 
     element.append(modal);
 
     button.addEventListener('click', () =>{
+        if(!sessionStorage.getItem('counterUser') && !sessionStorage.getItem('counterComputer')){
+            sessionStorage.setItem('counterUser', 0);
+            sessionStorage.setItem('counterComputer', 0);
+        }
+
         const userRecord = modal.querySelector('.nameUserRecord');
         const nameUserR = localStorage.getItem('nameUser');
         userRecord.innerText = nameUserR;
@@ -29,7 +34,7 @@ export const modalRecord = (element) => {
     });
 
     modal.addEventListener('click', (event) => {
-        if(event.target.className === 'modal-container' || event.target.className === 'span-x'){
+        if(event.target.className === 'modal-container-record' || event.target.className === 'spanX'){
             hideModal();
         }
     });

@@ -2,6 +2,74 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.hide-modal-alert {
+.hide-modal-record {
     display: none !important;
+}
+
+.modal-container-record {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.385);
+    z-index: 9999;
+}
+
+.modalRecord {
+    background-color: rgb(38, 37, 37);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgb(38, 37, 37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spanModal {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.spanX {
+    padding-left: 75px;
+}
+
+.spanX:hover {
+	color: #ff0008;
+    cursor: default;
+}
+
+.spanX:after {
+	cursor: pointer;
+}
+
+table {
+    background-color: rgb(0, 0, 0, 0.348);
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid;
+}
+
+th{
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: start;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+tr{
+    text-align: start;
+    border: 1px solid;
+}
+
+tr:hover {
+    background-color: #1f1c1c; /* efecto al pasar el mouse */
 }

@@ -16,7 +16,6 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
     if(!puntosMinimos) throw new Error('Puntos mínimos son necesarios');
     if(!puntosHTML) throw new Error('Argumento puntosHTML es necesarios');
 
-
     let puntosComputadora   = 0,
         whoWon              = '';
 
