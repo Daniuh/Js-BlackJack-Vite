@@ -13,7 +13,7 @@ export const hideModal = () => {
 }
 
 export const modalRecord = (element) => {
-    const button         = document.querySelector('#btnRecord');
+    const button = document.querySelector('#btnRecord');
     
     modal = document.createElement('div');
     modal.innerHTML = modalHtml;

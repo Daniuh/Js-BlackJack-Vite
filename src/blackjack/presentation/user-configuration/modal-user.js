@@ -13,7 +13,7 @@ export const hideModal = () => {
 }
 
 export const renderModal = (element) => {
-    const nameUserH1 = document.querySelector('.nameUserH1');
+    const nameUserH1     = document.querySelector('.nameUserH1');
 
     modal = document.createElement('div');
     modal.innerHTML = modalHtml;
@@ -23,8 +23,13 @@ export const renderModal = (element) => {
 
     element.append(modal);
 
-    showModal();
-
+    if(localStorage.getItem('nameUser')){
+        nameUserH1.innerText = localStorage.getItem('nameUser');
+        return
+    }else {
+        showModal();
+    }
+    
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 

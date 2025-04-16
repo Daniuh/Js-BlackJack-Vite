@@ -32,3 +32,32 @@ html, body {
 .nameUserH1, .userCounter {
   display: inline-block;
 }
+
+.lineButton {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.btn-stop, .btn-take, .btn-new, .btn-record, .btn-name {
+ background-color: rgb(38, 37, 37);
+ color: aliceblue;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.btn-new:hover {
+  background-color: rgb(141, 38, 38);
+}
+
+.btn-take:hover, .btn-stop:hover, .btn-record:hover, .btn-name:hover {
+  background-color: rgb(115, 168, 118);
+}
+
+.buttonBody {
+  display: flex;
+  justify-content: center;
+}
