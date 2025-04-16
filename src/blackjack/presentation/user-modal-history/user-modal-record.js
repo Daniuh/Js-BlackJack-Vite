@@ -21,10 +21,8 @@ export const modalRecord = (element) => {
     element.append(modal);
 
     button.addEventListener('click', () =>{
-        if(!sessionStorage.getItem('counterUser') && !sessionStorage.getItem('counterComputer')){
-            sessionStorage.setItem('counterUser', 0);
-            sessionStorage.setItem('counterComputer', 0);
-        }
+        if(!localStorage.getItem('counterUser')){localStorage.setItem('counterUser', 0);}
+        if(!localStorage.getItem('counterComputer')){localStorage.setItem('counterComputer', 0);}
 
         const userRecord = modal.querySelector('.nameUserRecord');
         const nameUserR = localStorage.getItem('nameUser');
@@ -44,6 +42,6 @@ const counterModal = () => {
     const counterUserR     = document.querySelector('.counterUserR');
     const counterComputerR = document.querySelector('.counterComputerR');
 
-    counterUserR.innerText     = sessionStorage.getItem('counterUser');
-    counterComputerR.innerText = sessionStorage.getItem('counterComputer');
+    counterUserR.innerText     = localStorage.getItem('counterUser');
+    counterComputerR.innerText = localStorage.getItem('counterComputer');
 }

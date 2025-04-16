@@ -61,9 +61,9 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
 }
 
 export const countersComputer = (contadorComputadora) => {
-    sessionStorage.setItem('counterComputer', contadorComputadora);
+    localStorage.setItem('counterComputer', contadorComputadora);
 }
 
 export const countersUser = (contadorJugador) => {
-    sessionStorage.setItem('counterUser', contadorJugador);
+    localStorage.setItem('counterUser', contadorJugador);
 }

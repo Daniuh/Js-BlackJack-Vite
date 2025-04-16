@@ -6,11 +6,6 @@ import './style.css';
 
 const element  = document.querySelector('#app');
 
-window.addEventListener('load', () => {
-    sessionStorage.removeItem('counterUser');
-    sessionStorage.removeItem('counterComputer');
-});
-
 renderModal(element);
 renderModalAlert(element);
 modalRecord(element);
