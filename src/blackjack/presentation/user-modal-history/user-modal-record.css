@@ -29,23 +29,27 @@ body {
     align-items: center;
 }
 
+.spanText {
+    padding-right: 75px;
+}
+
 .spanModal {
     display: flex;
     align-items: center;
     padding-bottom: 10px;
 }
 
-.spanX {
-    padding-left: 75px;
-}
-
 .spanX:hover {
-	color: #ff0008;
-    cursor: default;
+    cursor: pointer;
 }
 
-.spanX:after {
-	cursor: pointer;
+.buttonClearR {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 table {

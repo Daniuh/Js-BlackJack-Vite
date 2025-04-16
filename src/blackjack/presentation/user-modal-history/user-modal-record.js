@@ -1,5 +1,6 @@
 import modalHtml from './user-modal-record.html?raw';
 import './user-modal-record.css';
+import { clearCounterStorage } from '../../usecases/turno-computadora';
 
 let modal;
 
@@ -12,7 +13,7 @@ export const hideModal = () => {
 }
 
 export const modalRecord = (element) => {
-    const button     = document.querySelector('#btnRecord');
+    const button         = document.querySelector('#btnRecord');
     
     modal = document.createElement('div');
     modal.innerHTML = modalHtml;
@@ -36,6 +37,16 @@ export const modalRecord = (element) => {
             hideModal();
         }
     });
+
+    const buttonClearR = document.querySelector('.buttonClearRecord');
+    const userRecord     = document.querySelector('.counterUserR');
+    const computerRecord = document.querySelector('.counterComputerR');
+
+    buttonClearR.addEventListener('click', () => {
+        clearCounterStorage();
+        userRecord.innerText     = 0;
+        computerRecord.innerText = 0;
+    })
 }
 
 const counterModal = () => {

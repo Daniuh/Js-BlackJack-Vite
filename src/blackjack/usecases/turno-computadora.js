@@ -67,3 +67,10 @@ export const countersComputer = (contadorComputadora) => {
 export const countersUser = (contadorJugador) => {
     localStorage.setItem('counterUser', contadorJugador);
 }
+
+export const clearCounterStorage = () => {
+    contadorJugador     = 0;
+    contadorComputadora = 0;
+    localStorage.removeItem('counterUser', 0);
+    localStorage.removeItem('counterComputer', 0);
+}
