@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
-    background-image: url(../../../../public/assets/iconos/fondo-modal.png);
+    background-image: url(../../../../assets/iconos/fondo-modal.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
