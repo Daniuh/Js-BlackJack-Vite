@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/iconos/icon-site.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack</title>
+
+  <script type="module" crossorigin src="/assets/index-oHdy9pVH.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-0T98eybe.css">
+</head>
+
+<body>
+  <header class="titulo">
+    Blackjack
+  </header>
+
+  <div class="row mt-2">
+    <div id="app"></div>
+    <div id="divBotones" class="buttonBody">
+      <button id="btnNuevo" class="btn-new">Nuevo Juego</button>
+      <button id="btnPedir" class="btn-take">Pedir carta</button>
+      <button id="btnDetener" class="btn-stop">Detener</button>
+      <hr class="lineButton">
+      <button id="btnRecord" class="btn-record">Historico Juegos</button>
+      <button id="btnCambiarName" class="btn-name">Cambiar Nombre</button>
+    </div>
+  </div>
+
+  <div class="row container">
+    <div class="col">
+        <h1 class="nameUserH1"></h1>
+        <h1 class="userCounter">- <small>0</small></h1>
+      <div id="jugador-cartas">
+        <!-- <img class="carta" src="assets/cartas/2C.png"> -->
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row container mt-2">
+    <div class="col">
+
+      <h1>Computadora - <small>0</small></h1>
+      <div id="computadora-cartas">
+        <!-- <img class="carta" src="assets/cartas/3C.png"> -->
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
